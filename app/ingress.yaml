@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  defaultBackend:
+    service:
+      name: error
+      port:
+        number: 9000
+  rules:
+  - host: demo.com
+    http:
+      paths:
+      - path: /ngnix
+        pathType: Prefix
+        backend:
+          service:
+            name: demo
+            port:
+              number: 80
+      - path: /apache
+        pathType: Prefix
+        backend:
+          service:
+            name: demo2
+            port:
+              number: 8080
