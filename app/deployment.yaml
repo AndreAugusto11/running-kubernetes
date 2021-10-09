@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo
-  namespace: default
+  namespace: nginx
   labels:
     app: demo
 spec:
@@ -28,7 +28,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo2
-  namespace: default
+  namespace: nginx
   labels:
     app: demo2
 spec:
@@ -53,7 +53,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: error
-  namespace: default
+  namespace: nginx
   labels:
     app: error
 spec:
