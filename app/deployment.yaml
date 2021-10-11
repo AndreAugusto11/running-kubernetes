@@ -6,7 +6,7 @@ metadata:
   labels:
     app: demo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: demo
@@ -32,7 +32,7 @@ metadata:
   labels:
     app: demo2
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: demo2
