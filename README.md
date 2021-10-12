@@ -40,7 +40,7 @@ Clean up the environment using:
 
 `minikube delete`<br/><br/>
 
-# To install locally with Terraform
+# To install locally with Terraform (minikube)
 
 First run minikube :
 
