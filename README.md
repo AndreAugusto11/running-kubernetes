@@ -102,7 +102,7 @@ To Istio know in which pods to inject the proxy container, we need to indicate i
 
 To verify everything went correctly run:
 
-`kubectl get ns --show-labels` which should return a all the namespaces. One should be `nginx             Active   30s   istio-injectio=enabled(...)`.<br/><br/>
+`kubectl get ns --show-labels` which should return a all the namespaces. One should be `nginx             Active   30s   istio-injection=enabled(...)`.<br/><br/>
 
 Now we are ready to run the files. Go to folder app:
 
