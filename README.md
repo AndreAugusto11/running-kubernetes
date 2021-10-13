@@ -178,7 +178,7 @@ And run the port mapping again:
 
 `kubectl port-forward svc/grafana -n istio-system 3000`<br/><br/>
 
-And voila! The metrics are being displayed in 5 different dashboards that you can explore and learn mor in [Grafana Configuration](https://istio.io/latest/docs/ops/integrations/grafana/#configuration)<br/><br/>
+And voila! The metrics are being displayed in 5 different dashboards that you can explore and learn more in [Grafana Configuration](https://istio.io/latest/docs/ops/integrations/grafana/#configuration)<br/><br/>
 
 If you want to play around with this, do a simple benchmark using ab (Apache HTTP server benchmarking tool):
 
