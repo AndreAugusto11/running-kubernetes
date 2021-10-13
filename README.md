@@ -1,8 +1,8 @@
 # To install manually
 
-Go to folder app:
+Go to folder k8s:
 
-`cd app/`<br/><br/>
+`cd k8s/`<br/><br/>
 
 First run minikube :
 
@@ -41,6 +41,10 @@ Clean up the environment using:
 `minikube delete`<br/><br/>
 
 # To install locally with Terraform
+
+Go to folder local_terraform:
+
+`cd local_terraform/`<br/><br/>
 
 First run minikube :
 
@@ -104,9 +108,9 @@ To verify everything went correctly run:
 
 `kubectl get ns --show-labels` which should return a all the namespaces. One should be `nginx             Active   30s   istio-injectio=enabled(...)`.<br/><br/>
 
-Now we are ready to run the files. Go to folder app:
+Now we are ready to run the files. Go to folder k8s:
 
-`cd app/`<br/><br/>
+`cd k8s/`<br/><br/>
 
 Run each file : 
 
@@ -116,7 +120,7 @@ Run each file :
 
 `kubectl apply -f ingress.yaml`
 
-(Alternatively, if you want to run everything at once run `kubectl apply -f app/`, which will run all `.yaml` files inside `/app`)<br/><br/>
+(Alternatively, if you want to run everything at once run `kubectl apply -f k8s/`, which will run all `.yaml` files inside `k8s/`)<br/><br/>
 
 At this moment, the pods are being created with two containers, the Istio proxy and the service itself. To verify run:
 
@@ -186,4 +190,28 @@ Check some metrics changing like in the picture.
 
 Clean up the environment using:
 
-`minikube delete`
+`minikube delete`<br/><br/>
+
+# To install in GCP with Terraform
+
+Go to folder gcp_terraform:
+
+`cd gcp_terraform/`<br/><br/>
+
+Install gcloud and configure the the project and credentials ([Cloud SDK](https://cloud.google.com/sdk/docs/quickstart))
+
+Run terraform steps :
+
+`terraform init`
+
+`terraform plan`
+
+`terraform apply` 
+
+(This steps can take some time...)<br/><br/>
+
+At the moment, the ingress is not correctly configurated. To access the services, we have to do that individually through the respective node.
+
+Clean up the environment using:
+
+`terraform destroy`<br/><br/>
