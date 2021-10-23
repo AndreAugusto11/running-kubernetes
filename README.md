@@ -162,7 +162,7 @@ Open the browser in [Grafana Dashboard](http://localhost:3000)<br/><br/>
 
 Why can't you see anything?<br/><br/>
 
-Well, Grafana is a tool that allows you to configure Dashboards, but it does not collect the metrics by itself. So we need a datasource: in this case we will use Prometheus.<br/><br/>
+Well, Grafana is a tool that allows you to configure Dashboards, but it does not collect the metrics by itself. So we need a data source: in this case we will use Prometheus.<br/><br/>
 
 Using Istio, this is as easy as running the corresponding `.yaml` file as done before with Grafana.
 
@@ -178,7 +178,7 @@ And run the port mapping again:
 
 `kubectl port-forward svc/grafana -n istio-system 3000`<br/><br/>
 
-And voila! The metrics are being displayed in 5 different dashboards that you can explore and learn more in [Grafana Configuration](https://istio.io/latest/docs/ops/integrations/grafana/#configuration)<br/><br/>
+And voilà! The metrics are being displayed in 5 different dashboards that you can explore and learn more in [Grafana Configuration](https://istio.io/latest/docs/ops/integrations/grafana/#configuration)<br/><br/>
 
 If you want to play around with this, do a simple benchmark using ab (Apache HTTP server benchmarking tool):
 
@@ -198,7 +198,7 @@ Go to folder gcp_terraform:
 
 `cd gcp_terraform/`<br/><br/>
 
-Install gcloud and configure the the project and credentials ([Cloud SDK](https://cloud.google.com/sdk/docs/quickstart))
+Install gcloud and configure the project and credentials ([Cloud SDK](https://cloud.google.com/sdk/docs/quickstart))
 
 Run terraform steps :
 
@@ -208,9 +208,9 @@ Run terraform steps :
 
 `terraform apply` 
 
-(This steps can take some time...)<br/><br/>
+(These steps can take some time...)<br/><br/>
 
-At the moment, the ingress is not correctly configurated. To access the services, we have to do that individually through the respective node.
+At the moment, the ingress is not correctly configured. To access the services, we have to do that individually through the respective node.
 
 Clean up the environment using:
 
